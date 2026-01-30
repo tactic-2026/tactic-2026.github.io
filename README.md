@@ -1,2 +1,2 @@
-# RABBIT-website
-Website for RABBIT
+# TACTIC-website
+Website for TACTIC
