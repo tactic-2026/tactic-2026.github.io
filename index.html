@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>RABBIT</title>
+  <title>TACTIC</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
     rel="stylesheet">
@@ -37,28 +37,9 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">RABBIT: A Robot-Assisted Bed Bathing System with <br> Multimodal Perception and Integrated Compliance </h1>
+            <h1 class="title is-2 publication-title">TACTIC: Tactile and Vision Conditioned Contact Centric Control for Whole-Arm Physical Human-Robot Interaction</h1>
             <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="https://www.cs.cornell.edu/~madan/" target="_blank">Rishabh Madan</a><sup>1</sup>,</span>
-              <span class="author-block">
-                <a href="https://www.linkedin.com/in/skyler-v-b276301a9/" target="_blank">Skyler Valdez</a><sup>1</sup>,</span>
-              <span class="author-block">
-                <a href="http://heydavid.kim/" target="_blank">David Kim</a><sup>1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://www.linkedin.com/in/sujie-fang/" target="_blank">Sujie Fang</a><sup>1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="https://www.linkedin.com/in/luoyan-zhong-b7bba1296/" target="_blank">Luoyan Zhong</a><sup>1</sup>,
-              </span>
-              <br>
-              <span class="author-block">
-                <a href="https://www.linkedin.com/in/diego-virtue/" target="_blank">Diego Virtue</a><sup>1</sup>,
-              </span>
-              <span class="author-block">
-                <a href="http://www.tapomayukh.com/" target="_blank">Tapomayukh Bhattacharjee</a><sup>1</sup>
-              </span>
+              <h3>Author Names Omitted for Anonymous Review</h3>
             </div>
 
             <div class="is-size-5 publication-authors">
@@ -68,7 +49,7 @@
             <div class="column has-text-centered">
               <div class="publication-links">
                 <!-- PDF Link. -->
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://arxiv.org/abs/2401.15159" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -76,7 +57,7 @@
                     </span>
                     <span>Paper</span>
                   </a>
-                </span>
+                </span> -->
                 <!--              <span class="link-block">-->
                 <!--                <a href="https://arxiv.org/abs/2011.12948"-->
                 <!--                   class="external-link button is-normal is-rounded is-dark">-->
@@ -96,25 +77,25 @@
                     <span>Video</span>
                   </a>
                 </span>
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FLP12Y" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-database"></i>
                     </span>
-                    <span>Data</span>
+                    <span>Hardware</span>
                   </a>
-                </span>
+                </span> -->
                 <span class="link-block">
                   <a href="https://drive.google.com/drive/folders/1g9hBP9-Q9HB9iQf1WPRN6q6fIvdQBC7N?usp=drive_link" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fas fa-wrench"></i>
                     </span>
-                    <span>Hardware Files</span>
+                    <span>Hardware</span>
                   </a>
                 </span>
-                <span class="link-block">
+                <!-- <span class="link-block">
                   <a href="https://drive.google.com/drive/folders/1JBDk6kts-QFw6ic0ZkCYax5BMMjcANT6?usp=drive_link" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -122,7 +103,7 @@
                     </span>
                     <span>Supplementary Material</span>
                   </a>
-                </span>
+                </span> -->
                 <!-- Code Link. -->
                 <!-- <span class="link-block">
                 <a href="https://github.com/empriselab/SPARCS"
@@ -163,20 +144,28 @@
             <!--        <h2 class="title is-4">Abstract</h2>-->
             <div class="content has-text-justified">
               <p>
-                <b> Abstract: </b> This paper introduces RABBIT, a novel
-                robot-assisted bed bathing system designed to address the growing
-                need for assistive technologies in personal hygiene tasks. It
-                combines multimodal perception and dual (software and hardware)
-                compliance to perform safe and comfortable physical human-robot
-                interaction. Using RGB and thermal imaging to segment dry, soapy,
-                and wet skin regions accurately, RABBIT can effectively execute
-                washing, rinsing, and drying tasks in line with expert caregiving
-                practices. Our system includes custom-designed motion primitives
-                inspired by human caregiving techniques, and a novel compliant
-                end-effector called Scrubby, optimized for gentle and effective
-                interactions. We conducted a user study with 12 participants,
-                including one participant with severe mobility limitations,
-                demonstrating the system's effectiveness and perceived comfort.
+                <b> Abstract: </b> Whole-arm physical human-robot interaction (pHRI) involves direct, 
+                sustained contact with a person. The robot must complete the task while distributing 
+                contact across multiple links to maintain safe interaction forces as contacts form, 
+                slide, and break. This setting breaks common implicit assumptions in many learning-based 
+                manipulation pipelines: arm configuration tightly couples motion and forces, contact state 
+                is partially observed under occlusion, and purely learned rollouts can become physically 
+                inconsistent under distribution shift because many whole-arm contact configurations are 
+                sparsely represented in the data. To address this, we propose TACTIC (Tactile and Vision 
+                Conditioned Contact-Centric Control), a receding-horizon controller for whole-arm pHRI. 
+                TACTIC uses a contact-centric hybrid predictive model that couples RGB-D, distributed 
+                tactile sensing, and a compact 2D proximity representation. The model couples a learned, 
+                action-conditioned latent dynamics model with analytical kinematics through contact Jacobians, 
+                enabling rollouts of future contact configurations and interaction forces. TACTIC integrates 
+                these rollouts into a sampling-based MPC planner with contact-aware action sampling. Contact 
+                Jacobian-based projections steer sampled action sequences toward force-modulating directions, 
+                and objectives defined over predicted proximity and interaction forces trade task progress 
+                against whole-arm force regulation. We evaluate TACTIC in simulation against state-of-the-art 
+                model-based and model-free methods, and perform ablations that isolate the contribution of each 
+                design choice. In all of these experiments, TACTIC consistently outperforms alternative methods. 
+                We further demonstrate real-world performance on a robot with distributed tactile sensing in two 
+                caregiving tasks, turning over and limb repositioning, as well as goal reaching in a dynamic 
+                3D maze that requires multi-contact trajectories.
               </p>
             </div>
           </div>
@@ -186,7 +175,7 @@
   </section>
 
 
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>@article{madan2024rabbit,
@@ -196,7 +185,7 @@
  year      = {2024},
 }</code></pre>
     </div>
-  </section>
+  </section> -->
 
 
   <footer class="footer">
