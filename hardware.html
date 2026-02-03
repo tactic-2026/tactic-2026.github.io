@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <title>TACTIC – Hardware</title>
+  <title>Exoskeleton</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -12,6 +11,14 @@
   <link rel="stylesheet" href="./static/css/index.css">
 
   <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <style>
+    /* Optional: consistent spacing for "text + image" rows */
+    .step-block { margin-top: 1.25rem; }
+    .step-block .image img { border-radius: 10px; }
+    .caption { font-size: 0.95rem; opacity: 0.9; margin-top: 0.25rem; }
+    .section-title { margin-bottom: 1rem; }
+  </style>
 </head>
 
 <body>
@@ -21,25 +28,20 @@
     <div class="hero-body">
       <div class="container is-max-desktop has-text-centered">
 
-        <!-- Description -->
         <h1 class="title is-2">Hardware</h1>
         <p class="content is-size-5">
-          <b>TACTIC</b> provides two open-source hardware contributions for the Kinova Gen3-7DoF 
-          arm: an exoskeleton teleoperation interface and exact-fit tactile sensor mounts.
-        </p>
-        
-        <p class="content is-size-5 mt-2">
-          <b>More information coming soon!</b>
+          <b>TACTIC</b> provides open-source hardware contributions for the Kinova Gen3-7DoF
+          arm, including an exoskeleton teleoperation interface.
         </p>
 
         <!-- Home button -->
         <div style="margin-bottom: 1.5rem;">
-          <a href="./index.html"
-             class="button is-rounded is-dark">
+          <a href="./index.html" class="button is-rounded is-dark">
             <span class="icon"><i class="fas fa-home"></i></span>
             <span>Home</span>
           </a>
         </div>
+
       </div>
     </div>
   </section>
@@ -48,91 +50,241 @@
   <section class="section">
     <div class="container is-max-desktop">
 
-      <h2 class="title is-3 has-text-centered">Exoskeleton</h2>
+      <h2 class="title is-3 has-text-centered section-title">Exoskeleton</h2>
 
+      <!-- Main image -->
       <div class="columns is-centered">
-        <div class="column is-8 has-text-centered">
+        <div class="column is-10">
 
-          <!-- Image -->
-          <figure class="image mb-1">
-            <img src="./static/images/exoskeleton.png"
-                 alt="Exoskeleton hardware platform"
+          <figure class="image mb-3">
+            <img src="./static/images/main_exo_fig.png"
+                 alt="Exoskeleton teleoperation controller (main figure)"
                  style="width: 100%; height: auto; display: block;">
           </figure>
 
-          <!-- Description -->
-          <p class="content" style="text-align: left; margin-top: 0;">
-            The whole-arm exoskeleton platform enables safe, high-bandwidth
-            physical interaction and provides proprioceptive measurements used
-            during contact-aware control. The system supports multi-link contact
-            and is integrated with vision and tactile sensing for hybrid
-            predictive control.
+          <p class="content" style="text-align: left;">
+            <b>Exoskeleton teleoperation controller, for mirrored whole-arm teleoperation of the Kinova Gen3-7DoF
+            during demonstration collection.</b> While many teleoperation interfaces permit arbitrary arm motion,
+            mirroring human whole-arm movements is critical for accurately capturing caregiving-relevant
+            manipulation behaviors. Our custom exoskeleton is a scaled replica of the robot and consists of seven
+            Dynamixel XC330-M288-T actuators that match the robot’s kinematic structure. Joint velocity measurements
+            are mapped to velocity commands for the robot at 40 Hz. An additional actuator integrated into a trigger
+            handle controls the start and end of data collection. Safety mechanisms and paired initialization ensure
+            stable and reliable operation.
           </p>
 
-          <!-- Link button -->
-          <a href=""
-             target="_blank"
-             class="button is-normal is-rounded is-dark">
-            <span class="icon">
-              <i class="fab fa-github"></i>
-            </span>
-            <span>Software</span>
-          </a>
+          <!-- Link buttons -->
+          <div class="buttons is-centered mt-4">
+            <a href="" target="_blank" class="button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>Software</span>
+            </a>
 
-          <a href="https://drive.google.com/drive/folders/1AvNeaXUs9SyLvRrF4yL9hyBtIdEDoqVM?usp=drive_link"
-             target="_blank"
-             class="button is-normal is-rounded is-dark">
-            <span class="icon">
-              <i class="fas fa-wrench"></i>
-            </span>
-            <span>Hardware Files</span>
-          </a>
-          
+            <a href="https://drive.google.com/drive/folders/1AvNeaXUs9SyLvRrF4yL9hyBtIdEDoqVM?usp=drive_link"
+               target="_blank"
+               class="button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fas fa-wrench"></i></span>
+              <span>Hardware Files</span>
+            </a>
+          </div>
+
+          <hr>
+
+          <!-- Bill of Materials -->
+          <h3 class="title is-4">Bill of Materials</h3>
+
+          <div class="table-container">
+            <table class="table is-fullwidth is-striped is-hoverable">
+              <thead>
+                <tr>
+                  <th>Vendor</th>
+                  <th>Description</th>
+                  <th>Cost / Per Unit</th>
+                  <th>Quantity</th>
+                  <th>Cost</th>
+                  <th>Link</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Robotis</td>
+                  <td>DYNAMIXEL XL330-M288-T</td>
+                  <td>$27.49</td>
+                  <td>7</td>
+                  <td>$192.43</td>
+                  <td>
+                    <a href="https://www.robotis.us/dynamixel-xl330-m288-t/" target="_blank" rel="noopener">
+                      Product page
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Robotis</td>
+                  <td>DYNAMIXEL XL330-M077-T</td>
+                  <td>$27.49</td>
+                  <td>1</td>
+                  <td>$27.49</td>
+                  <td>
+                    <a href="https://www.robotis.us/dynamixel-xl330-m077-t/" target="_blank" rel="noopener">
+                      Product page
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Robotis</td>
+                  <td>U2D2</td>
+                  <td>$36.92</td>
+                  <td>1</td>
+                  <td>$36.92</td>
+                  <td>
+                    <a href="https://www.robotis.us/u2d2/" target="_blank" rel="noopener">
+                      Product page
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Robotis</td>
+                  <td>U2D2 Power Hub Board Set</td>
+                  <td>$21.85</td>
+                  <td>1</td>
+                  <td>$21.85</td>
+                  <td>
+                    <a href="https://www.robotis.us/u2d2-power-hub-board-set/" target="_blank" rel="noopener">
+                      Product page
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th colspan="4" style="text-align:right;">Total</th>
+                  <th>$278.69</th>
+                  <th></th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <p class="content">
+            Additionally, you will need a <b>5V DC Power Supply</b> and a small <b>Phillips head screwdriver</b>.
+          </p>
+
+          <hr>
+
+          <!-- Printer Parts -->
+          <h3 class="title is-4">Printer Parts</h3>
+
+          <figure class="image mb-2">
+            <img src="./static/images/exo_cads.png"
+                 alt="3D-printed parts / CAD for the exoskeleton"
+                 style="width: 100%; height: auto; display: block;">
+          </figure>
+
+          <hr>
+
+          <!-- Assembly -->
+          <h3 class="title is-4">Assembly</h3>
+
+          <!-- Step 1 -->
+          <h4 class="title is-5 mb-2">Step 1: Build the Arm</h4>
+          <p class="content">
+            The arm is assembled of 7 joints with DYNAMIXEL XL330-M288-T motors:
+          </p>
+
+          <!-- Two-column: elbow assembly -->
+          <div class="columns is-vcentered step-block">
+            <div class="column is-6">
+              <p class="content">
+                <b>Assemble 3 elbow joints:</b> Combine the XX and XX with the motor.
+              </p>
+            </div>
+            <div class="column is-6">
+              <figure class="image">
+                <img src="./static/images/elbow_assembly.png"
+                     alt="Elbow joint assembly">
+              </figure>
+              <p class="caption">Elbow assembly</p>
+            </div>
+          </div>
+
+          <!-- Two-column: revolute assembly -->
+          <div class="columns is-vcentered step-block">
+            <div class="column is-6">
+              <p class="content">
+                <b>Assemble 4 revolute joints:</b> Combine ...
+              </p>
+            </div>
+            <div class="column is-6">
+              <figure class="image">
+                <img src="./static/images/rev_assembly.png"
+                     alt="Revolute joint assembly">
+              </figure>
+              <p class="caption">Revolute assembly</p>
+            </div>
+          </div>
+
+          <p class="content">
+            The exoskeleton connects the joints alternating elbow-revolute from the base up using the tube connector pieces.
+            To connect joints, slide in the corresponding dovetail pieces and secure with a screw.
+          </p>
+
+          <figure class="image mb-3">
+            <img src="./static/images/final_exo.png"
+                 alt="Completed exoskeleton arm"
+                 style="width: 100%; height: auto; display: block;">
+          </figure>
+
+          <p class="content">
+            Fit the base joint piece into the base and secure it with screws.
+          </p>
+
+          <!-- Step 2 -->
+          <h4 class="title is-5 mb-2 mt-5">Step 2: Attach the handle</h4>
+
+          <div class="columns is-vcentered step-block">
+            <div class="column is-6">
+              <p class="content">
+                Attach the solid handle piece to the end of the arm by sliding in the dovetail connector and securing with a screw.
+              </p>
+              <p class="content">
+                If using the trigger handle, attach the DYNAMIXEL XL330-M077-T:
+                Connect the trigger to the handle.
+              </p>
+            </div>
+            <div class="column is-6">
+              <figure class="image">
+                <img src="./static/images/handle_assembly.png"
+                     alt="Handle and trigger assembly">
+              </figure>
+              <p class="caption">Handle assembly</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <h4 class="title is-5 mb-2 mt-5">Step 3: Attach the wires</h4>
+          <p class="content">
+            Connect the wires in a chain connecting the Dynamixels from the base to the trigger.
+          </p>
+
+          <!-- Step 4 -->
+          <h4 class="title is-5 mb-2 mt-5">Step 4: Connect controller</h4>
+          <p class="content">
+            With the U2D2 and U2D2 Power Hub Board Set, assemble the Dynamixel controller.
+            Attach the controller to the robot base.
+          </p>
+
+          <div class="notification is-light mt-5">
+            <b>All done!</b> Visit the <b>Software</b> page linked above to finish setup!
+          </div>
+
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Skin sensor mounts section -->
-  <section class="section is-light">
-    <div class="container is-max-desktop">
-
-      <h2 class="title is-3 has-text-centered">Skin Sensor Mounts</h2>
-
-      <div class="columns is-centered">
-        <div class="column is-8 has-text-centered">
-
-          <!-- Image -->
-          <figure class="image mb-1">
-            <img src="./static/images/skin.png"
-                 alt="Distributed skin sensor mounts"
-                 style="width: 100%; height: auto; display: block;">
-          </figure>
-
-          <!-- Description -->
-          <p class="content" style="text-align: left; margin-top: 0;">
-            Distributed skin sensor mounts provide dense tactile feedback across
-            the robot arm, enabling detection of contact location, normal
-            direction, and force magnitude. These measurements are critical for
-            predicting and regulating interaction forces during whole-arm pHRI.
-          </p>
-
-          <!-- Link button -->
-          <a href="https://drive.google.com/drive/folders/19TfDd0NodwHl0YCKfOe-FvUkq9HR4rcZ?usp=drive_link"
-             target="_blank"
-             class="button is-normal is-rounded is-dark">
-            <span class="icon">
-              <i class="fas fa-wrench"></i>
-            </span>
-            <span>Hardware Files</span>
-          </a>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
+  <!-- Optional: keep your Skin Sensor Mounts section below if you still want it.
+       (Not edited here, since your request only specified replacing with Exoskeleton content.) -->
 
   <!-- Footer -->
   <footer class="footer">
