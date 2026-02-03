@@ -35,19 +35,17 @@
         </p>
 
         <!-- Home button -->
-        <div style="margin-bottom: 1.5rem;">
-          <a href="./index.html" class="button is-rounded is-dark">
+        <div class="buttons is-centered mt-4" style="margin-bottom: 1.5rem;">
+            <a href="./index.html" class="button is-rounded is-dark">
             <span class="icon"><i class="fas fa-home"></i></span>
             <span>Home</span>
           </a>
-        </div>
 
-        <div style="margin-bottom: 1.5rem;">
-          <a href="./skin.html" class="button is-rounded is-dark">
+            <a href="./skin.html" class="button is-rounded is-dark">
             <span class="icon"><i class="fas fa-hand-paper"></i></span>
             <span>Skin Sensor</span>
           </a>
-        </div>
+          </div>
 
       </div>
     </div>
@@ -181,11 +179,27 @@
           <!-- Printer Parts -->
           <h3 class="title is-4">Printer Parts</h3>
 
+          <h4>Exoskeleton parts:</h4>
           <figure class="image mb-2">
             <img src="./static/images/exo_cads.png"
                  alt="3D-printed parts / CAD for the exoskeleton"
                  style="width: 100%; height: auto; display: block;">
           </figure>
+
+          <h4>Trigger handle parts:</h4>
+          <figure class="image mb-2">
+            <img src="./static/images/handle_cads.png"
+                 alt="3D-printed parts / CAD for the exoskeleton"
+                 style="width: 45%; height: auto; display: block;">
+          </figure>
+          <p class="caption">
+            Source:
+            <a href="https://wuphilipp.github.io/gello_site/"
+               target="_blank"
+               rel="noopener noreferrer">
+              https://wuphilipp.github.io/gello_site/
+            </a>
+          </p>
 
           <hr>
 
@@ -208,7 +222,6 @@
                    alt="Revolute joint assembly"
                    style="width: 100%; height: auto;">
             </figure>
-            <p class="caption">Revolute assembly</p>
             <p class="content mt-2">
               Assemble 4 revolute joints.
             </p>
@@ -221,7 +234,6 @@
                    alt="Elbow joint assembly"
                    style="width: 100%; height: auto;">
             </figure>
-            <p class="caption">Elbow assembly</p>
             <p class="content mt-2">
               Assemble 3 elbow joints.
             </p>
@@ -229,16 +241,27 @@
         
         </div>
 
-          <p class="content">
-            The exoskeleton connects the joints alternating elbow-revolute from the base up using the tube connector pieces.
-            To connect joints, slide in the corresponding dovetail pieces and secure with a screw.
-          </p>
+          <div class="columns is-vcentered step-block">
 
-          <figure class="image mb-3">
-            <img src="./static/images/final_exo.png"
-                 alt="Completed exoskeleton arm"
-                 style="width: 70%; height: auto; display: block;">
-          </figure>
+          <!-- Image (LEFT) -->
+          <div class="column is-6 has-text-centered">
+            <figure class="image">
+              <img src="./static/images/final_exo.png"
+                   alt="Completed exoskeleton arm"
+                   style="width: 50%; height: auto; display: inline-block;">
+            </figure>
+          </div>
+        
+          <!-- Text (RIGHT) -->
+          <div class="column is-6">
+            <p class="content">
+              The exoskeleton connects the joints alternating elbow–revolute from the base up using the tube connector pieces.
+              To connect joints, slide in the corresponding dovetail pieces and secure with a screw.
+            </p>
+          </div>
+        
+        </div>
+
 
           <p class="content">
             Fit the base joint piece into the base and secure it with screws.
