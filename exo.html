@@ -28,10 +28,10 @@
     <div class="hero-body">
       <div class="container is-max-desktop has-text-centered">
 
-        <h1 class="title is-2">Hardware</h1>
+        <h1 class="title is-2">Open-Source Hardware</h1>
         <p class="content is-size-5">
-          <b>TACTIC</b> provides open-source hardware contributions for the Kinova Gen3-7DoF
-          arm, including an exoskeleton teleoperation interface.
+          <b>TACTIC</b> provides open-source hardware contributions for the Kinova Gen3-7DoF arm, 
+          including an exoskeleton teleoperation interface and exact-fit tactile sensor mounts.
         </p>
 
         <!-- Home button -->
@@ -39,6 +39,13 @@
           <a href="./index.html" class="button is-rounded is-dark">
             <span class="icon"><i class="fas fa-home"></i></span>
             <span>Home</span>
+          </a>
+        </div>
+
+        <div style="margin-bottom: 1.5rem;">
+          <a href="./skin.html" class="button is-rounded is-dark">
+            <span class="icon"><i class="fas fa-hand-paper"></i></span>
+            <span>Skin Sensor</span>
           </a>
         </div>
 
@@ -192,36 +199,35 @@
           </p>
 
           <!-- Two-column: elbow assembly -->
-          <div class="columns is-vcentered step-block">
-            <div class="column is-6">
-              <p class="content">
-                <b>Assemble 3 elbow joints:</b> Combine the XX and XX with the motor.
-              </p>
-            </div>
-            <div class="column is-6">
-              <figure class="image">
-                <img src="./static/images/elbow_assembly.png"
-                     alt="Elbow joint assembly">
-              </figure>
-              <p class="caption">Elbow assembly</p>
-            </div>
-          </div>
+          <div class="columns step-block">
 
-          <!-- Two-column: revolute assembly -->
-          <div class="columns is-vcentered step-block">
-            <div class="column is-6">
-              <p class="content">
-                <b>Assemble 4 revolute joints:</b> Combine ...
-              </p>
-            </div>
-            <div class="column is-6">
-              <figure class="image">
-                <img src="./static/images/rev_assembly.png"
-                     alt="Revolute joint assembly">
-              </figure>
-              <p class="caption">Revolute assembly</p>
-            </div>
+          <!-- Revolute assembly (LEFT) -->
+          <div class="column is-6 has-text-centered">
+            <figure class="image mb-2">
+              <img src="./static/images/rev_assembly.png"
+                   alt="Revolute joint assembly"
+                   style="width: 100%; height: auto;">
+            </figure>
+            <p class="caption">Revolute assembly</p>
+            <p class="content mt-2">
+              Assemble 4 revolute joints.
+            </p>
           </div>
+        
+          <!-- Elbow assembly (RIGHT) -->
+          <div class="column is-6 has-text-centered">
+            <figure class="image mb-2">
+              <img src="./static/images/elbow_assembly.png"
+                   alt="Elbow joint assembly"
+                   style="width: 100%; height: auto;">
+            </figure>
+            <p class="caption">Elbow assembly</p>
+            <p class="content mt-2">
+              Assemble 3 elbow joints.
+            </p>
+          </div>
+        
+        </div>
 
           <p class="content">
             The exoskeleton connects the joints alternating elbow-revolute from the base up using the tube connector pieces.
@@ -231,7 +237,7 @@
           <figure class="image mb-3">
             <img src="./static/images/final_exo.png"
                  alt="Completed exoskeleton arm"
-                 style="width: 100%; height: auto; display: block;">
+                 style="width: 70%; height: auto; display: block;">
           </figure>
 
           <p class="content">
@@ -254,9 +260,8 @@
             <div class="column is-6">
               <figure class="image">
                 <img src="./static/images/handle_assembly.png"
-                     alt="Handle and trigger assembly">
+                     alt="Handle and trigger assembly"
               </figure>
-              <p class="caption">Handle assembly</p>
             </div>
           </div>
 
@@ -282,9 +287,6 @@
 
     </div>
   </section>
-
-  <!-- Optional: keep your Skin Sensor Mounts section below if you still want it.
-       (Not edited here, since your request only specified replacing with Exoskeleton content.) -->
 
   <!-- Footer -->
   <footer class="footer">
