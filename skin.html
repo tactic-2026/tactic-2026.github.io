@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TACTIC – Skin Sensor</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+
+  <style>
+    .step-block { margin-top: 1.25rem; }
+    .step-block .image img { border-radius: 10px; }
+    .caption { font-size: 0.95rem; opacity: 0.9; margin-top: 0.25rem; }
+    .section-title { margin-bottom: 1rem; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top section -->
+  <section class="hero is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop has-text-centered">
+
+        <h1 class="title is-2">Skin Sensor</h1>
+
+        <p class="content is-size-5">
+          <b>TACTIC</b> provides open-source hardware contributions for the Kinova Gen3-7DoF arm,
+          including an exoskeleton teleoperation interface and exact-fit tactile sensor mounts.
+        </p>
+
+        <!-- Home button -->
+        <div style="margin-bottom: 1.5rem;">
+          <a href="./index.html" class="button is-rounded is-dark">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span>Home</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skin Sensor section -->
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <h2 class="title is-3 has-text-centered section-title">Skin Sensor</h2>
+
+      <div class="columns is-centered">
+        <div class="column is-10">
+
+          <!-- Main image -->
+          <figure class="image mb-3">
+            <img src="./static/images/main_skin_fig.png"
+                 alt="Skin sensor (main figure)"
+                 style="width: 100%; height: auto; display: block;">
+          </figure>
+
+          <!-- Description -->
+          <p class="content" style="text-align: left;">
+            21-pad skin sensor, for monitored pressure data on the arm. 21 Tekscan FlexiForce A502 Sensors are
+            mounted on the robot, including 5 on each of the two first spherical wrist joints, 6 on the forearm link,
+            and 6 on the half-arm link. Individual tactile sensor pressure readings are communicated through four
+            Adafruit Feather M0 WiFi boards, with one on each link, at ~800 Hz per-board.
+          </p>
+
+          <!-- Link buttons -->
+          <div class="buttons is-centered mt-4">
+            <a href="" target="_blank" class="button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fab fa-github"></i></span>
+              <span>Software</span>
+            </a>
+
+            <a href="" target="_blank" class="button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fas fa-wrench"></i></span>
+              <span>Hardware Files</span>
+            </a>
+          </div>
+
+          <hr>
+
+          <!-- Bill of Materials -->
+          <h3 class="title is-4">Bill of Materials</h3>
+
+          <div class="table-container">
+            <table class="table is-fullwidth is-striped is-hoverable">
+              <thead>
+                <tr>
+                  <th>Vendor</th>
+                  <th>Description</th>
+                  <th>Cost / Per Unit</th>
+                  <th>Quantity</th>
+                  <th>Cost</th>
+                  <th>Link</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Tekscan</td>
+                  <td>FlexiForce Pads</td>
+                  <td>$27.87</td>
+                  <td>21</td>
+                  <td>$584.14</td>
+                  <td>
+                    <a href="https://www.tekscan.com/products-solutions/force-sensors/flexiforce-a502-sensor"
+                       target="_blank" rel="noopener">
+                      Product page
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Adafruit</td>
+                  <td>Adafruit Feather M0 WiFi</td>
+                  <td>$39.95</td>
+                  <td>4</td>
+                  <td>$159.80</td>
+                  <td>
+                    <a href="https://www.adafruit.com/product/3010" target="_blank" rel="noopener">
+                      Product page
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Adafruit</td>
+                  <td>3.7 V LiPo Rechargeable Battery</td>
+                  <td>$12.50</td>
+                  <td>4</td>
+                  <td>$50.00</td>
+                  <td>
+                    <a href="https://www.digikey.com/en/products/detail/adafruit-industries-llc/2011/6612469"
+                       target="_blank" rel="noopener">
+                      Product page
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Adafruit</td>
+                  <td>Adafruit Micro-Lipo Charger</td>
+                  <td>$6.95</td>
+                  <td>4</td>
+                  <td>$27.80</td>
+                  <td>
+                    <a href="https://www.adafruit.com/product/1904" target="_blank" rel="noopener">
+                      Product page
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Amazon</td>
+                  <td>Gorilla Clear Double-Sided Mounting Tape</td>
+                  <td>$11.99</td>
+                  <td>1</td>
+                  <td>$11.99</td>
+                  <td>
+                    <a href="https://www.amazon.com/Gorilla-6036002-Tough-Mounting-inches/dp/B07LFRN1K8"
+                       target="_blank" rel="noopener">
+                      Product page
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Amazon</td>
+                  <td>JST XH 2.5-2 Pin Battery Connector (50 set)</td>
+                  <td>$7.79</td>
+                  <td>1</td>
+                  <td>$7.79</td>
+                  <td>
+                    <a href="https://www.amazon.com/Usdepant-2-5-2-Battery-Connector-Female/dp/B074J89ZC6"
+                       target="_blank" rel="noopener">
+                      Product page
+                    </a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>Amazon</td>
+                  <td>Double-Sided Velcro</td>
+                  <td>$15.43</td>
+                  <td>1</td>
+                  <td>$15.43</td>
+                  <td>
+                    <a href="https://www.amazon.com/VELCRO-Brand-Industrial-Fasteners-VEL-30838-USA/dp/B0B74YQCGD"
+                       target="_blank" rel="noopener">
+                      Product page
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+
+              <tfoot>
+                <tr>
+                  <th colspan="4" style="text-align:right;">Total</th>
+                  <th>$856.95</th>
+                  <th></th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <hr>
+
+          <!-- Printer Parts -->
+          <h3 class="title is-4">Printer Parts</h3>
+          <figure class="image mb-2">
+            <img src="./static/images/skin_cads.png"
+                 alt="3D-printed parts / CAD for the skin sensor mounts"
+                 style="width: 100%; height: auto; display: block;">
+          </figure>
+
+          <hr>
+
+          <!-- Assembly -->
+          <h3 class="title is-4">Assembly</h3>
+
+          <!-- Step 1 -->
+          <h4 class="title is-5 mb-2">Step 1: Connect tactile sensor pads to the board</h4>
+          <p class="content">
+            Make wires and connect taxels.
+          </p>
+
+          <!-- Step 2 -->
+          <h4 class="title is-5 mb-2 mt-5">Step 2: Attach boards to mount</h4>
+
+          <div class="columns is-vcentered step-block">
+            <div class="column is-6">
+              <p class="content">
+                Screw in board to mount. Tape tactile sensors on the outside with Gorilla tape.
+              </p>
+            </div>
+            <div class="column is-6">
+              <figure class="image">
+                <img src="./static/images/skin_mount.png"
+                     alt="Skin mount (board + sensor attachment)">
+              </figure>
+              <p class="caption">Skin mount</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <h4 class="title is-5 mb-2 mt-5">Step 3: Put mounts on the robot</h4>
+          <p class="content">
+            For longer mounts (XXX), they will snap into place on the robot links.
+            If needed for the smaller mounts, use a small amount of Velcro on the inside to stick to the robot.
+          </p>
+
+          <figure class="image mb-3 mt-4">
+            <img src="./static/images/final_skin.png"
+                 alt="Final skin sensor installation on the robot"
+                 style="width: 100%; height: auto; display: block;">
+          </figure>
+
+          <div class="notification is-light mt-5">
+            <b>All done!</b> Visit the <b>Software</b> page linked above to finish setup!
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>TACTIC Hardware Overview</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
