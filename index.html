@@ -108,28 +108,24 @@
             <!--        <h2 class="title is-4">Abstract</h2>-->
             <div class="content has-text-justified">
               <p>
-                <b> Abstract: </b> Whole-arm physical human-robot interaction (pHRI) involves direct,
-                sustained contact with a person. The robot must complete the task while distributing
-                contact across multiple links to maintain safe interaction forces as contacts form,
-                slide, and break. This setting breaks common implicit assumptions in many learning-based
-                manipulation pipelines: arm configuration tightly couples motion and forces, contact state
-                is partially observed under occlusion, and purely learned rollouts can become physically
-                inconsistent under distribution shift because many whole-arm contact configurations are
-                sparsely represented in the data. To address this, we propose TACTIC (Tactile and Vision
-                Conditioned Contact-Centric Control), a receding-horizon controller for whole-arm pHRI.
-                TACTIC uses a contact-centric hybrid predictive model that couples RGB-D, distributed
-                tactile sensing, and a compact 2D proximity representation. The model couples a learned,
-                action-conditioned latent dynamics model with analytical kinematics through contact Jacobians,
-                enabling rollouts of future contact configurations and interaction forces. TACTIC integrates
-                these rollouts into a sampling-based MPC planner with contact-aware action sampling. Contact
-                Jacobian-based projections steer sampled action sequences toward force-modulating directions,
-                and objectives defined over predicted proximity and interaction forces trade task progress
-                against whole-arm force regulation. We evaluate TACTIC in simulation against state-of-the-art
-                model-based and model-free methods, and perform ablations that isolate the contribution of each
-                design choice. In all of these experiments, TACTIC consistently outperforms alternative methods.
-                We further demonstrate real-world performance on a robot with distributed tactile sensing in two
-                caregiving tasks, turning over and limb repositioning, as well as goal reaching in a dynamic
-                3D maze that requires multi-contact trajectories.
+                <b> Abstract: </b> Whole-arm manipulation involves direct contact with the environment while the robot 
+                completes a task by distributing contact across multiple links as contacts form, slide, and break. This 
+                setting breaks common implicit assumptions in many learning-based manipulation pipelines: arm configuration 
+                tightly couples motion and contact forces, contact state is partially observed under occlusion, and purely 
+                learned rollouts can become physically inconsistent under distribution shift because many multi-link contact 
+                configurations are sparsely represented in the data. To address this, we propose TACTIC (Tactile and Vision 
+                Conditioned Contact-Centric Control), a receding-horizon controller for whole-arm manipulation. TACTIC uses 
+                a contact-centric hybrid predictive model that combines RGB-D, distributed tactile sensing, and a compact 2D 
+                proximity representation. The model couples a learned, action-conditioned latent dynamics model with analytical 
+                kinematics through contact Jacobians, enabling rollouts of future contact configurations and interaction forces. 
+                TACTIC integrates these rollouts into a sampling-based MPC planner with contact-aware action sampling: contact 
+                Jacobian-based projections steer sampled action sequences toward force-modulating directions, and objectives 
+                defined over predicted proximity and interaction forces trade task progress against whole-arm force regulation. 
+                We evaluate TACTIC in simulation against state-of-the-art model-based and model-free methods, and perform 
+                ablations that isolate the contribution of each design choice. Across experiments, TACTIC consistently outperforms 
+                other methods. We further demonstrate real-world performance on a robot with distributed tactile sensing across 
+                three whole-arm manipulation tasks that require multi-contact trajectories: turning over and repositioning a manikin, 
+                and goal-reaching in a 3D dynamic maze.
               </p>
             </div>
           </div>
